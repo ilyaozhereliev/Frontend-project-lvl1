@@ -4,3 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/2469e283ed3ccdcbbf70/maintainability)](https://codeclimate.com/github/ilyaozhereliev/frontend-project-lvl1/maintainability)
 
 [![Node CI](https://github.com/ilyaozhereliev/frontend-project-lvl1/workflows/ci/badge.svg)](https://github.com/ilyaozhereliev/frontend-project-lvl1/actions)
+
+https://asciinema.org/a/97ytNjZxXD7Q9B7tF2hvobPZn
