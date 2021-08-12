@@ -1,17 +1,15 @@
-import readlineSync from 'readline-sync';
+import engine from '../index.js';
 
 const brainCalc = () => {
-  console.log('Welcome to the brain-games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?');
+  const description = 'What is the result of the expression?';
   const array = ['+', '-', '*'];
+  const rounds = [];
 
   for (let i = 0; i < 3; i += 1) {
-    const randomElement = array[Math.floor(Math.random() * array.length)];
+    const randomElement = array[Math.floor(Math.random() * 100) % array.length];
     const randomNumber = Math.floor(Math.random() * 100);
     const randomNumberTwo = Math.floor(Math.random() * 100);
-    console.log(`Question: ${randomNumber} ${randomElement} ${randomNumberTwo}`);
+    const question = `Question: ${randomNumber} ${randomElement} ${randomNumberTwo}`;
 
     const calc = (a, b, sym) => {
       switch (sym) {
@@ -28,23 +26,10 @@ const brainCalc = () => {
       }
     };
 
-    const userAnswer = readlineSync.question('Your answer: ');
-    const rightAnswer = calc(randomNumber, randomNumberTwo, randomElement);
-
-    if (Number(userAnswer) === rightAnswer) {
-      console.log('Correct!');
-    } else if (Number(userAnswer) !== rightAnswer) {
-      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.
-      Let's try again, ${name}!`);
-      break;
-    } else {
-      console.log(`Error! You must write only numbers. Let's try again, ${name}!`);
-      break;
-    }
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`);
-    }
+    const expectedAnswer = String(calc(randomNumber, randomNumberTwo, randomElement));
+    rounds.push([question, expectedAnswer]);
   }
+  engine(description, rounds);
 };
 
 export default brainCalc;
