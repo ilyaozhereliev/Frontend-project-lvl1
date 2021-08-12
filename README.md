@@ -5,4 +5,5 @@
 
 [![Node CI](https://github.com/ilyaozhereliev/frontend-project-lvl1/workflows/ci/badge.svg)](https://github.com/ilyaozhereliev/frontend-project-lvl1/actions)
 
-https://asciinema.org/a/97ytNjZxXD7Q9B7tF2hvobPZn
+https://asciinema.org/a/97ytNjZxXD7Q9B7tF2hvobPZn // step 5 'brain-even'
+https://asciinema.org/a/tizZ9TghVmRRoaKoIhQ3sAjPp // step 6 'brain-calc'
