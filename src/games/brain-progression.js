@@ -31,9 +31,9 @@ const brainProgression = () => {
       return result;
     };
 
-    const progressionResult = progression().join(',').replace(/,/g, ' ').split();
+    const progressionResult = progression();
 
-    const question = `Question: ${progressionResult[0]}`;
+    const question = `Question: ${progressionResult[0].join(',').replace(/,/g, ' ').split()}`;
 
     const expectedAnswer = String(progressionResult[1]);
     rounds.push([question, expectedAnswer]);
