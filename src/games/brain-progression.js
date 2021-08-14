@@ -23,7 +23,7 @@ const brainProgression = () => {
       const index = progressionArr.indexOf(hideNum);
 
       if (index !== -1) {
-        progressionArr[index] = '...';
+        progressionArr[index] = '..';
       }
 
       result.push(progressionArr);
@@ -31,7 +31,7 @@ const brainProgression = () => {
       return result;
     };
 
-    const progressionResult = progression();
+    const progressionResult = progression().join(',').replace(/,/g, ' ').split();
 
     const question = `Question: ${progressionResult[0]}`;
 
