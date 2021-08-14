@@ -20,7 +20,7 @@ const engine = (description, rounds) => {
       return;
     }
   }
-  console.log(`Congatulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default engine;
